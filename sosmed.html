@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my sosmed</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.7/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.7/dist/sweetalert2.min.css"
+    />
+
+    <style type="text/css">
+      body {
+        overflow: hidden;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .social {
+        position: fixed;
+        top: 270px;
+        z-index: 3;
+      }
+      .social ul {
+        padding: 0px;
+        -webkit-transform: translate(-290px, 0);
+        -moz-transform: translate(-290px, 0);
+        -ms-transform: translate(-290px, 0);
+        -o-transform: translate(-290px, 0);
+        transform: translate(-290px, 0);
+      }
+      .social ul {
+        padding: 0px;
+        -webkit-transform: translate(-290px, 0);
+        -moz-transform: translate(-290px, 0);
+        -ms-transform: translate(-290px, 0);
+        -o-transform: translate(-290px, 0);
+        transform: translate(-290px, 0);
+      }
+      .social ul li:hover {
+        -webkit-transform: translate(110px, 0);
+        -moz-transform: translate(110px, 0);
+        -ms-transform: translate(110px, 0);
+        -o-transform: translate(110px, 0);
+        transform: translate(110px, 0);
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .social ul li:hover a {
+        top: 20px;
+      }
+      .social ul {
+        padding: 0px;
+        -webkit-transform: translate(-280px, 0);
+        -moz-transform: translate(-280px, 0);
+        -ms-transform: translate(-280px, 0);
+        -o-transform: translate(-280px, 0);
+        transform: translate(-280px, 0);
+      }
+      .social ul li {
+        display: block;
+        margin: 5px;
+        background: rgba(0, 0, 0, 0.36);
+        width: 300px;
+        text-align: right;
+        padding: 10px;
+        -webkit-border-radius: 0 30px 30px 0;
+        -moz-border-radius: 0 30px 30px 0;
+        border-radius: 0 30px 30px 0;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+      }
+      .social ul li:hover {
+        -webkit-transform: translate(110px, 0);
+        -moz-transform: translate(110px, 0);
+        -ms-transform: translate(110px, 0);
+        -o-transform: translate(110px, 0);
+        transform: translate(110px, 0);
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .social ul li:hover a {
+        color: #000;
+      }
+      .social ul li:hover i {
+        color: #fff;
+        background: red;
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+      }
+      .social ul li i {
+        margin-left: 10px;
+        text-align: center;
+        color: #000;
+        font-size: large;
+      }
+      .social ul li:hover {
+        -webkit-transform: translate(110px, 0);
+        -moz-transform: translate(110px, 0);
+        -ms-transform: translate(110px, 0);
+        -o-transform: translate(110px, 0);
+        transform: translate(110px, 0);
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .social ul li:hover a {
+        color: #000;
+      }
+      .social ul li:hover i {
+        color: #fff;
+        border: 2px solid black;
+        background: #6b4f4f;
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+      }
+
+      .social ul li i {
+        text-align: center;
+        margin-left: 10px;
+        color: #000;
+        background: #fff;
+        padding: 10px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 22px;
+        background: #ffffff;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      body {
+        background: #25343f;
+        color: #fff;
+        font-family: cursive;
+        display: fixed;
+        overflow: hidden visible;
+        z-index: 3;
+      }
+      img {
+        width: 250px;
+        border-radius: 100%;
+        border: 2px solid white;
+        margin-top: 5px;
+      }
+      h1 {
+        font-size: 35px;
+        color: #fff000;
+      }
+      .na {
+        display: relative;
+        position: fixed;
+      }
+      .nav {
+        display: block;
+        position: relative;
+        left: 10%;
+      }
+      a {
+        font-size: 20px;
+      }
+      #o {
+        width: 40px;
+        border-radius: 100%;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="na">
+      <p class="nav">
+        Set Background :
+        <input type="color" id="colorPicker" value="#36acec" />
+        <code id="colorCode"></code> <span> || </span>
+        <button id="o" onclick="p();"><i class="fa fa-music"></i></button>
+        <span> || </span>
+        <span id="jam1"></span>
+      </p>
+      <hr />
+    </div>
+    <center
+      style="
+        background: rgba(0, 0, 0, 0.1);
+        left: 50px;
+        margin-right: 20px;
+        border-radius: 20px;
+        min-width: 250px;
+        height: 45rem;
+        box-shadow: 5px 5px 5px #484a4b5c;
+        top: 10%;
+        position: absolute;
+      "
+    >
+      <h1>About me</h1>
+      <img
+        src="https://drive.google.com/uc?export=view&id=1IOgwKsCdcTj_81RX-M7r_uHGyXidalCS"
+      />
+
+      <h2>Hai Iam Maulana Faizal Fardani</h2>
+      <p
+        style="
+          min-width: 10px;
+          font-family: monospace;
+          font-size: 14px;
+          position: relative;
+          left: 2%;
+          padding: 20px;
+          word-spacing: 1px;
+        "
+      >
+        Asli keturunan gresik jawa timur, lahir dan besar di kota gresik dan
+        masih berjuang untuk menyelesaikan sekolah pada salah satu smk jurusan
+        teknik otomasi indutri di kota yang sama. Menyukai hal-hal yang
+        berhubungan dengan komputer, baca-baca e-book, baca artikel dari blog ke
+        blog, website ke website , baca quotes dan curi-curi ide design tapi
+        enggak pernah bisa sama seperti yang di contoh Hahaha..... :v . Intinya
+        saya mudah tertarik dengan semua hal yang menurut saya menarik dan unik
+        di dunia.
+      </p>
+    </center>
+
+    <div class="social">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/maulana.faisal.756"
+            >Facebook <i class="fab fa-facebook"> </i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/mfzlf_28"
+            >Instagram <i class="fab fa-instagram"> </i
+          ></a>
+        </li>
+        <li>
+          <a href="https://wa.me/6285156694254?text=Assalamualaikum"
+            >WhatsApp <i class="fab fa-whatsapp"> </i
+          ></a>
+        </li>
+        <li>
+          <a href="https://vt.tiktok.com/ZSdNYdsns/"
+            >Tiktok <i class="fab fa-tiktok"> </i
+          ></a>
+        </li>
+        <li>
+          <a href="https://t.me/@jangan_lupa_senyum"
+            >Telegram <i class="fab fa-telegram"> </i
+          ></a>
+        </li>
+        <li>
+          <a href="https://mfzlf28.blogspot.com"
+            >Blogger <i class="fab fa-blogger"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      const body = document.querySelector("body");
+      const input = document.getElementById("colorPicker");
+      const colorCode = document.getElementById("colorCode");
+
+      setColor();
+      input.addEventListener("input", setColor);
+
+      function setColor() {
+        body.style.backgroundColor = input.value;
+        colorCode.innerHTML = input.value;
+      }
+
+      function p() {
+        var audio = new Audio(
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/6978471541411531521.mp3"
+        );
+        var p = document.getElementById("o");
+        audio.play();
+      }
+
+      const clock12 = document.getElementById("jam1");
+
+      // Concatenate a zero to the left of every single digit time frame
+      function concatZero(timeFrame) {
+        return timeFrame < 10 ? "0".concat(timeFrame) : timeFrame;
+      }
+
+      function realTime() {
+        let date = new Date();
+        let sec = date.getSeconds();
+        let mon = date.getMinutes();
+        let hr = date.getHours();
+        // 12 hour time
+        // If the hour equals 0 or 12, the remainder equals 0, so output 12 instead. (0 || 12 = 12)
+        clock12.textContent = `${concatZero(hr % 12 || 12)} : ${concatZero(
+          mon
+        )} : ${concatZero(sec)} ${hr >= 12 ? "PM" : "AM"}`;
+      }
+      setInterval(realTime, 1000);
+    </script>
+  </body>
+</html>
