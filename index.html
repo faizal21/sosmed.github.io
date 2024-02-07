@@ -1,331 +1,444 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my sosmed</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.7/dist/sweetalert2.all.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.7/dist/sweetalert2.min.css"
-    />
+    <meta charset="utf-8"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <title>profile</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"></link>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"></link>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style type="text/css">
-      body {
-        overflow: hidden;
-      }
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-      .social {
-        position: fixed;
-        top: 270px;
-        z-index: 3;
-      }
-      .social ul {
-        padding: 0px;
-        -webkit-transform: translate(-290px, 0);
-        -moz-transform: translate(-290px, 0);
-        -ms-transform: translate(-290px, 0);
-        -o-transform: translate(-290px, 0);
-        transform: translate(-290px, 0);
-      }
-      .social ul {
-        padding: 0px;
-        -webkit-transform: translate(-290px, 0);
-        -moz-transform: translate(-290px, 0);
-        -ms-transform: translate(-290px, 0);
-        -o-transform: translate(-290px, 0);
-        transform: translate(-290px, 0);
-      }
-      .social ul li:hover {
-        -webkit-transform: translate(110px, 0);
-        -moz-transform: translate(110px, 0);
-        -ms-transform: translate(110px, 0);
-        -o-transform: translate(110px, 0);
-        transform: translate(110px, 0);
-        background: rgba(255, 255, 255, 0.4);
-      }
-      .social ul li:hover a {
-        top: 20px;
-      }
-      .social ul {
-        padding: 0px;
-        -webkit-transform: translate(-280px, 0);
-        -moz-transform: translate(-280px, 0);
-        -ms-transform: translate(-280px, 0);
-        -o-transform: translate(-280px, 0);
-        transform: translate(-280px, 0);
-      }
-      .social ul li {
-        display: block;
-        margin: 5px;
-        background: rgba(0, 0, 0, 0.36);
-        width: 300px;
-        text-align: right;
-        padding: 10px;
-        -webkit-border-radius: 0 30px 30px 0;
-        -moz-border-radius: 0 30px 30px 0;
-        border-radius: 0 30px 30px 0;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -ms-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
-      }
-      .social ul li:hover {
-        -webkit-transform: translate(110px, 0);
-        -moz-transform: translate(110px, 0);
-        -ms-transform: translate(110px, 0);
-        -o-transform: translate(110px, 0);
-        transform: translate(110px, 0);
-        background: rgba(255, 255, 255, 0.4);
-      }
-      .social ul li:hover a {
-        color: #000;
-      }
-      .social ul li:hover i {
-        color: #fff;
-        background: red;
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -ms-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
-      }
-      .social ul li i {
-        margin-left: 10px;
-        text-align: center;
-        color: #000;
-        font-size: large;
-      }
-      .social ul li:hover {
-        -webkit-transform: translate(110px, 0);
-        -moz-transform: translate(110px, 0);
-        -ms-transform: translate(110px, 0);
-        -o-transform: translate(110px, 0);
-        transform: translate(110px, 0);
-        background: rgba(255, 255, 255, 0.4);
-      }
-      .social ul li:hover a {
-        color: #000;
-      }
-      .social ul li:hover i {
-        color: #fff;
-        border: 2px solid black;
-        background: #6b4f4f;
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -ms-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
+    <style>
+    
+      *{ margin:0;
+        padding: 0;
+        }
+
+      .post-footer {
+        display: none !important;
       }
 
-      .social ul li i {
-        text-align: center;
-        margin-left: 10px;
-        color: #000;
-        background: #fff;
-        padding: 10px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        font-size: 22px;
-        background: #ffffff;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-      body {
-        background: #25343f;
-        color: #fff;
-        font-family: cursive;
-        display: fixed;
-        overflow: hidden visible;
-        z-index: 3;
-      }
-      img {
+      .gambar {
         width: 250px;
-        border-radius: 100%;
-        border: 2px solid white;
-        margin-top: 5px;
-      }
-      h1 {
-        font-size: 35px;
-        color: #fff000;
-      }
-      .na {
-        display: relative;
-        position: fixed;
-      }
-      .nav {
-        display: block;
+        height: 300px;
+        border-radius: 5px 30px;
+        border: 2px solid white !important;
+        top: 1rem;
         position: relative;
-        left: 10%;
       }
-      a {
+      .gambar:hover{
+        transform: scale(0.8);
+        transition: all 1s ease-in;      }
+      #p {
+        background-color: #f0f0f0;
+        border-radius: 3px;
+        height: 100vh;
+
+      }
+      .conteiner h1 {
+        position: relative;
+        left: 3rem;
+        font-size: 2rem;
+        top: 5rem;
+      }
+      .b {
+        position: relative;
+        height: 50px;
+        width: 120px;
+        left: 3rem;
+        font-size: 1rem;
+        top: 10rem;
+        border-radius: 5px;
+        background-color: rgb(178, 191, 226);
+      }
+      .b:hover {
+        background-color: aqua;
+        border: 2px solid white;
+      }
+      #a {
+        background-color: #eadbc8;
+        height: 35rem;
+
+      }
+
+       .wrapper .button {
+        position: relative;
+        height: 60px;
+
+        width: 60px;
+
+        float: left;
+
+        margin: 0 5px;
+
+        overflow: hidden;
+
+        background: white;
+
+        border-radius: 50px;
+
+        cursor: pointer;
+
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+        transition: all 1s ease-out;
+      }
+
+      .wrapper .button:hover {
+        width: 170px;
+      }
+
+      .wrapper .button .icon {
+        display: inline-block;
+
+        height: 60px;
+
+        width: 60px;
+
+        text-align: center;
+
+        border-radius: 50px;
+
+        box-sizing: border-box;
+
+        line-height: 60px;
+
+        transition: all 1s ease-out;
+      }
+
+      .wrapper .button:nth-child(1):hover .icon {
+        background: #4267b2;
+        
+      }
+
+      .wrapper .button:nth-child(2):hover .icon {
+        background: black;
+      }
+
+      .wrapper .button:nth-child(3):hover .icon {
+        background: #e1306c;
+      }
+
+      .wrapper .button .icon i {
+        font-size: 25px;
+
+        line-height: 60px;
+
+        transition: all 0.1s ease-out;
+      }
+
+      .wrapper .button:hover .icon i {
+        color: #fff;
+      }
+
+      .wrapper .button span {
         font-size: 20px;
+        
+
+        font-weight: 500;
+
+        line-height: 60px;
+
+        margin-left: 2px;
+
+        transition: all 0.1s ease-out;
       }
-      #o {
-        width: 40px;
-        border-radius: 100%;
-        height: 40px;
+     
+
+      .wrapper .button:nth-child(1) i {
+        color: #4267b2;
+      }
+
+      .wrapper .button:nth-child(1) span {
+        color: #4267b2;
+      }
+
+      .wrapper .button:nth-child(2) i {
+        color: black;
+      }
+
+      .wrapper .button:nth-child(2) span {
+        color: black;
+      }
+
+      .wrapper .button:nth-child(3) i {
+        color: #e1306c;
+      }
+
+      .wrapper .button:nth-child(3) span {
+        color: #e1306c;
+      }
+
+      a {
+        text-decoration: none !important;
+      }
+
+      #sosmed{
+      background-color: #CEDEBD;
+      position:relative;
+      height: 30rem;
+      padding-top: 4rem;
+      }
+      
+      
+      #music{
+        background-color: #ECE3CE;
+        width:100%;
+        border-radius: 0 0 10px 10px;
+        height: 40rem;
+      }
+      .music-player{
+        width: 70rem;
+        height: 25rem;
+        background-color: #f2f2f2;
+        margin: 20px;
+        border-radius: 10px;
+        margin-top: 10rem;
+      }
+
+      .controls {
+        top: 1rem;
+        background-color: black;
+        border-radius: 50px;
+        padding-top:10px;
+        width: 23.5rem;
+        height: 50px;
+        text-align:center;
+        position: relative;
+        left: 23rem;
+      }
+
+      .playlist {
+        list-style: none;
+        padding: 30px 0 0 0;
+        position: relaive;
+        left: -10px;
+        
+      }
+
+      .playlist li {
+        
+        cursor: pointer;
+        background-color: #D0D4CA;
+        width: 30rem;
+        height: 30px;
+        margin-top:20px;
+        border-radius: 5px;
+        padding-left: 20px;
+      }
+
+      .playlist li:hover{
+        background-color: #FFCD4B;
+        border-radius: 5px;
+      }
+      .playlist li.active {
+        background-color: #ff6600;
+      }
+      
+      #playPauseBtn{
+        width: 100px;
+        height: 30px;
+        font-family: monospace;
+        border-radius: 30px;
+        border: none;
+        margin-right: 20px;
+        background-color: #F5E8B7;
+      }
+
+
+      @media (max-width: 960px) {
+        
+        .b {
+          top: 4rem;
+          left: 1rem;
+          width:100px;
+          height: 30px;
+          left: 3rem;
+        }
+         #a{
+           height: 85rem;
+           padding: 0 -110px 0 -110px;
+            
+        }
+        
+        .music-player{
+          width: 20rem;
+        }
+        .controls{
+        width: 18rem;
+         left : 10px;
+        }
+        .playlist{
+          padding-top: 5rem !important;
+        }
+        .playlist li{
+          width: 15rem;
+          padding-left: 10px;
+          height: 50px;
+          text-align: center;
+          
+        }
+        .t{
+          text-align: center;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="na">
-      <p class="nav">
-        Set Background :
-        <input type="color" id="colorPicker" value="#36acec" />
-        <code id="colorCode"></code> <span> || </span>
-        <button id="o" onclick="p();"><i class="fa fa-music"></i></button>
-        <span> || </span>
-        <span id="jam1"></span>
-      </p>
-      <hr />
+        <div class="jumbotron px-5 pt-3" id="p" >
+          
+          <div data-aos="flip-left" data-aos-duration="1000" class="text-center">
+          <img class="gambar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguTtI-1Uyjyjm4SFiwh6_7TXiTsgB376W5jV4iOGoex0yeydD3gDiTvWKcghmXaMtoDTyFiZKKCbIMOWcZbQludMBIU8SJvXUJ0nf1Bw5yDJh11ntXv0vgB3y2jDHsBr6lvrziu8b3Vmkqh73ChSmsBpxcP7_JnGNO8o-wKXsiDsSv87LOnnGgeLlGIETv/s320/IMG_20230514_142638.jpg" />
+        </div>
+          
+        <div class="t text-center" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+          <h1  style="font-family: cursive; font-size: 2rem; padding-top: 2rem;">Hi There.. !!!</h1>
+          <h1 style="font-weight: bold;">I'm Faizal </h1>
+          <h1>I'm Electrical Angineering</h1>
+          </div>
+      </div>
+
+
+    <div class="conteiner" id="a">
+      <div class="row-mb-2 text-center" style="padding-top: 2rem;">
+            <div data-aos="fade-down" data-aos-duration="100" data-aos-offset="50" data-aos-easing="ease-in-sine" class="col">
+              <h2>About Me </h2>
+            </div>
+       </div>
+       <div data-aos="fade-down" data-aos-duration="1000" data-aos-offset="50" data-aos-easing="ease-in-sine" class="row justify-content-center pt-3  text-center mx-3">
+            <div class="col-ms-4">
+              <p> Halo! Nama saya Maulana Faizal Fardani. Saya sangat senang bisa
+            berkenalan dengan Anda di sini. Saya lahir dan besar di Indonesia
+            dan saat ini berusia 21 tahun. Saya memiliki semangat yang besar
+            untuk belajar dan mengembangkan diri di berbagai bidang, termasuk
+            teknologi dan ilmu komputer. Saat tidak sibuk dengan tugas dan proyek, saya mengeksplorasi dunia
+            teknologi. Saya tertarik dengan pengembangan perangkat lunak,
+            otomisasi dan pengembangan web. Saya juga menyukai bidang
+            kelistrikan dan ilmu pengetahuan, serta senang mempelajari hal-hal
+            baru yang terkait dengan ilmu komputer. Selain di dunia teknologi,
+            saya juga memiliki minat dalam olahraga. Saya suka berenang. Hal ini
+            membantu saya menjaga kebugaran dan menyeimbangkan rutinitas kerja
+            saya. Saya menyelesaikan pendidikan sekolah di SMKN 1 CERME. Jurusan
+            Teknik Otomasi Industri.</p>
+            </div>
+         	 <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-easing="ease-in-sine" class="col-ms-4">
+              <p>Saya memiliki tujuan untuk mengembangkan keterampilan dan
+            pengetahuan saya di bidang teknologi. Saya ingin menjadi seseorang
+            yang profesional dan kompeten serta bisa berkontribusi dalam
+            menciptakan solusi baru untuk tantangan teknologi masa depan. Saya
+            percaya bahwa dengan dedikasi, kerja keras, dan semangat belajar
+            yang terus-menerus, kita semua bisa mencapai apa pun yang kita
+            inginkan. Saya terus memotivasi diri saya untuk terus belajar,
+            mengembangkan keterampilan, dan berinovasi dalam menjalani
+            perjalanan karir saya di bidang teknologi dan kelistrikan. </p>
+            </div>
+        </div>
     </div>
-    <center
-      style="
-        background: rgba(0, 0, 0, 0.1);
-        left: 50px;
-        margin-right: 20px;
-        border-radius: 20px;
-        min-width: 250px;
-        height: 45rem;
-        box-shadow: 5px 5px 5px #484a4b5c;
-        top: 10%;
-        position: absolute;
-      "
-    >
-      <h1>About me</h1>
-      <img
-        src="IMG_20230730_114813.jpg"
-      />
+    
+    <div class="conteiner" id="sosmed">
+      <div class="row">
+        <h1 style="left: -3px; position: relative; text-align: center; top: 10px; margin-button: 3rem;" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-easing="ease-in-sine">
+          My Sosmed
+        </h1>
+        <div class="col d-flex justify-content-center" style="padding-top: 5rem;">
+          <div class="wrapper">
+            <div class="button" data-aos="fade-down" data-aos-duration="500" data-aos-offset="75" data-aos-easing="ease-in-sine">
+              <a href="https://www.facebook.com/maulana.faisal.756">
+                <div class="icon">
+                  <i class="fab fa-facebook-f"></i></div>
+              <span>Facebook</span></a>
+            </div>
 
-      <h2>Hai Iam Maulana Faizal Fardani</h2>
-      <p
-        style="
-          min-width: 10px;
-          font-family: monospace;
-          font-size: 14px;
-          position: relative;
-          left: 2%;
-          padding: 20px;
-          word-spacing: 1px;
-        "
-      >
-        Asli keturunan gresik jawa timur, lahir dan besar di kota gresik dan
-        masih berjuang untuk menyelesaikan sekolah pada salah satu smk jurusan
-        teknik otomasi indutri di kota yang sama. Menyukai hal-hal yang
-        berhubungan dengan komputer, baca-baca e-book, baca artikel dari blog ke
-        blog, website ke website , baca quotes dan curi-curi ide design tapi
-        enggak pernah bisa sama seperti yang di contoh Hahaha..... :v . Intinya
-        saya mudah tertarik dengan semua hal yang menurut saya menarik dan unik
-        di dunia.
-      </p>
-    </center>
+            <div class="button" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="75" data-aos-easing="ease-in-sine">
+              <a href="https://vt.tiktok.com/ZSdNYdsns/">
+                <div class="icon">
+                  <i class="fab fa-tiktok"></i></div>
+              <span>Tiktok</span></a>
+            </div>
 
-    <div class="social">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/maulana.faisal.756"
-            >Facebook <i class="fab fa-facebook"> </i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/mfzlf_28"
-            >Instagram <i class="fab fa-instagram"> </i
-          ></a>
-        </li>
-        <li>
-          <a href="https://wa.me/6285156694254?text=Assalamualaikum"
-            >WhatsApp <i class="fab fa-whatsapp"> </i
-          ></a>
-        </li>
-        <li>
-          <a href="https://vt.tiktok.com/ZSdNYdsns/"
-            >Tiktok <i class="fab fa-tiktok"> </i
-          ></a>
-        </li>
-        <li>
-          <a href="https://t.me/@jangan_lupa_senyum"
-            >Telegram <i class="fab fa-telegram"> </i
-          ></a>
-        </li>
-        <li>
-          <a href="https://mfzlf28.blogspot.com"
-            >Blogger <i class="fab fa-blogger"></i
-          ></a>
-        </li>
+            <div class="button" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="75" data-aos-easing="ease-in-sine">
+              <a href="https://www.instagram.com/mfzlf_28">
+                <div class="icon">
+                  <i class="fab fa-instagram"></i></div>
+              <span>Instagram</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="conteiner" id="music">
+      <div class="row justify-content-center d-flex" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="75" data-aos-easing="ease-in-sine">  
+      <h1 style="left: -3px; position: relative; top: 3rem; text-align: center;">
+          My Favorit song's 
+        </h1>
+      <div class="music-player" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100" data-aos-easing="ease-in-sine">
+      <audio id="audio" src="music.mp3" preload="auto"></audio>
+      <div class="controls">
+        <button id="playPauseBtn">Play</button>
+        <input type="range" id="volumeSlider" min="0" max="100" />
+      </div>
+      <ul class="playlist">
+        <h1 style="left: -3px; position: relative; top: 8px;">
+          Playlist:
+        </h1>
+        <li data-src="https://audio.jukehost.co.uk/fsVtsYdSodi88wcHK9dEq1LX3kwOaagP">nadhif basalamah - penjaga hati</li>
+        <li data-src="https://audio.jukehost.co.uk/SF2r5uia4HbIsfz614CG53rPxyetJN8F">DJ PINGAL slow bass</li>
+        <li data-src="https://audio.jukehost.co.uk/IFS87kh0JM1peBLDu7ClKHSxmneoAixF">DJ WIRANG - DENNY CAKNAN</li>
       </ul>
-    </div>
+        </div>
+       </div>
+      </div>
+      
+    <script>
+        const audio = document.getElementById('audio');
+      const playPauseBtn = document.getElementById('playPauseBtn');
+      const volumeSlider = document.getElementById('volumeSlider');
+      const playlist = document.querySelectorAll('.playlist li');
 
-    <script type="text/javascript">
-      const body = document.querySelector("body");
-      const input = document.getElementById("colorPicker");
-      const colorCode = document.getElementById("colorCode");
+      let currentSong = 0;
 
-      setColor();
-      input.addEventListener("input", setColor);
+      playPauseBtn.addEventListener('click', function() {
+        if (audio.paused) {
+          audio.play();
+          playPauseBtn.textContent = 'Pause';
+        } else {
+          audio.pause();
+          playPauseBtn.textContent = 'Play';
+        }
+      });
 
-      function setColor() {
-        body.style.backgroundColor = input.value;
-        colorCode.innerHTML = input.value;
+      volumeSlider.addEventListener('input', function() {
+        audio.volume = volumeSlider.value / 100;
+      });
+
+      playlist.forEach((song, index) => {
+        song.addEventListener('click', function() {
+          audio.src = song.getAttribute('data-src');
+          audio.play();
+          playPauseBtn.textContent = 'Pause';
+          currentSong = index;
+          highlightSong();
+        });
+      });
+
+      function highlightSong() {
+        playlist.forEach((song, index) => {
+          if (index === currentSong) {
+            song.classList.add('active');
+          } else {
+            song.classList.remove('active');
+          }
+        });
       }
-
-      function p() {
-        var audio = new Audio(
-          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/6978471541411531521.mp3"
-        );
-        var p = document.getElementById("o");
-        audio.play();
-      }
-
-      const clock12 = document.getElementById("jam1");
-
-      // Concatenate a zero to the left of every single digit time frame
-      function concatZero(timeFrame) {
-        return timeFrame < 10 ? "0".concat(timeFrame) : timeFrame;
-      }
-
-      function realTime() {
-        let date = new Date();
-        let sec = date.getSeconds();
-        let mon = date.getMinutes();
-        let hr = date.getHours();
-        // 12 hour time
-        // If the hour equals 0 or 12, the remainder equals 0, so output 12 instead. (0 || 12 = 12)
-        clock12.textContent = `${concatZero(hr % 12 || 12)} : ${concatZero(
-          mon
-        )} : ${concatZero(sec)} ${hr >= 12 ? "PM" : "AM"}`;
-      }
-      setInterval(realTime, 1000);
     </script>
+    
+    
+    <script>
+        AOS.init();
+	</script>
+    
+    <script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
